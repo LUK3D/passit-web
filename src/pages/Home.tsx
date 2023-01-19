@@ -14,8 +14,8 @@ export default function Home() {
                 </div>
             </div>
             <div className='flex flex-col w-full h-[500px] justify-center relative'>
-                <img className='absolute w-full right-0 h-full rounded-lg' src={'https://images.pexels.com/photos/3765106/pexels-photo-3765106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} alt="" />
-                <a href='https://www.pexels.com/photo/portrait-photo-of-smiling-man-in-white-dress-shirt-and-brown-waistcoattexting-3765106/' target="_blank">Photo by Andrea Piacquadio</a>
+                <img className=' w-full right-0 h-full rounded-lg' src={'https://images.pexels.com/photos/3765106/pexels-photo-3765106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} alt="" />
+                <a className='text-xs text-gray-500' href='https://www.pexels.com/photo/portrait-photo-of-smiling-man-in-white-dress-shirt-and-brown-waistcoattexting-3765106/' target="_blank">Photo by Andrea Piacquadio</a>
             </div>
         </div>
     )
