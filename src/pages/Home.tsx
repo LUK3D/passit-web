@@ -1,5 +1,6 @@
 import React from 'react'
 
+import image from '../assets/image01.png';
 export default function Home() {
     return (
         <div className='p-10 flex '>
@@ -12,7 +13,10 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            <div className='flex flex-col w-full h-[500px] justify-center'></div>
+            <div className='flex flex-col w-full h-[500px] justify-center relative'>
+                <img className='absolute w-full right-0 h-full rounded-lg' src={'https://images.pexels.com/photos/3765106/pexels-photo-3765106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} alt="" />
+                <a href='https://www.pexels.com/photo/portrait-photo-of-smiling-man-in-white-dress-shirt-and-brown-waistcoattexting-3765106/' target="_blank">Photo by Andrea Piacquadio</a>
+            </div>
         </div>
     )
 }
