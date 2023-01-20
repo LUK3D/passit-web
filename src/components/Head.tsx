@@ -5,7 +5,7 @@ import logo from '../assets/passit.svg'
 export default function Head() {
     const { activeMenu, menus } = useMenusStore((state) => state);
     return (
-        <div className='w-full h-12 bg-white fixed top-0 right-0 flex justify-between items-center'>
+        <div className='w-full h-12 bg-white fixed top-0 right-0 flex justify-between items-center z-10'>
             <ul className='flex items-center'>
                 <li className='mr-10 ml-5'>
                     <img className='w-10 h-10' src={logo} alt="" />
@@ -18,7 +18,7 @@ export default function Head() {
                 ))}
 
             </ul>
-            <button className='px-5 py-2.5 bg-green-500 text-white m-2'>
+            <button className='px-5 py-2.5 bg-green-500 text-white m-2 rounded-md'>
                 Torne-se motorista
             </button>
         </div>
