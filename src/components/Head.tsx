@@ -1,9 +1,12 @@
 import React from 'react'
 import { useMenusStore } from '../stores'
 import logo from '../assets/passit.svg'
+import { useSignUpDialogStore } from "../components/signup/dialogStore";
+
 
 export default function Head() {
     const { activeMenu, menus } = useMenusStore((state) => state);
+    const {toggle } = useSignUpDialogStore((state) => state);
     return (
         <div className='w-full  bg-white fixed top-0 right-0 flex justify-between items-center z-10 text-sm md:text-lg py-1 shadow'>
             <ul className='flex items-center'>
@@ -18,7 +21,7 @@ export default function Head() {
                 ))}
 
             </ul>
-            <button className=' hidden md:flex px-5 py-2.5 bg-green-500 text-white m-2 rounded-md'>
+            <button onClick={()=>toggle()} className=' hidden md:flex px-5 py-2.5 bg-green-500 text-white m-2 rounded-md'>
                 Torne-se motorista
             </button>
         </div>

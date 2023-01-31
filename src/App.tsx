@@ -1,7 +1,7 @@
 import './App.css'
 import Footer from './components/Footer'
 import Head from './components/Head'
-import SignUpDialog from './components/SignUpDialog'
+import SignUpDialog from './components/signup/SignUpDialog'
 import Home from './pages/Home'
 
 function App() {
