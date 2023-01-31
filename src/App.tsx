@@ -10,7 +10,6 @@ function App() {
       <Head></Head>
       <Home></Home>
       <Footer></Footer>
-
     </div>
   )
 }
