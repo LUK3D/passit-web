@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className=' flex flex-col-reverse w-full mt-10 border-t p-5 lg:p-20'>
+            <div className=' flex flex-col-reverse lg:flex-row w-full mt-10 border-t p-5 lg:p-20'>
 
                 <div className='flex flex-col w-full lg:h-[500px] justify-center lg:pr-40'>
                     <p className='text-2xl md:text-4xl lg:text-6xl font-bold mt-10 lg:mt-0'>NÃO CONHECE O LOCAL PRA ONDE VAI?</p>
