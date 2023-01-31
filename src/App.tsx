@@ -1,6 +1,7 @@
 import './App.css'
 import Footer from './components/Footer'
 import Head from './components/Head'
+import SignUpDialog from './components/SignUpDialog'
 import Home from './pages/Home'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Head></Head>
       <Home></Home>
       <Footer></Footer>
+      <SignUpDialog></SignUpDialog>
     </div>
   )
 }
