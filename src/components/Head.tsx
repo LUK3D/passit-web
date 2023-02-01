@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useMenusStore } from '../stores'
 import logo from '../assets/passit.svg'
 import { useSignUpDialogStore } from "../components/signup/dialogStore";
+import { Link } from 'react-router-dom';
 
 
 export default function Head() {
@@ -19,10 +20,10 @@ export default function Head() {
                     <img className='w-10 h-10' src={logo} alt="" />
                 </li>
                 {menus.map(menu => (
-                    <a href={menu.url} onClick={() => activeMenu(window.location.pathname)} key={menu.name} className={`mx-2 flex group flex-col relative cursor-pointer transition-all transform transition-transform active:scale-95 ${menu.active && 'text-green-500 font-bold'}`}>
+                    <Link to={menu.url!} onClick={() => activeMenu(window.location.pathname)} key={menu.name} className={`mx-2 flex group flex-col relative cursor-pointer transition-all transform transition-transform active:scale-95 ${menu.active && 'text-green-500 font-bold'}`}>
                         {menu.name}
                         <div className='w-full h-1 bg-green-500 origin-left scale-0 group-hover:scale-100  absolute -bottom-2 transform transition-transform'></div>
-                    </a>
+                    </Link>
                 ))}
 
             </ul>
