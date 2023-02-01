@@ -4,8 +4,8 @@ import { Menus } from "../types";
 
 export const useMenusStore = create<Menus>((set) => ({
     menus: [
-        { index: 0, name: "Motorista", active: true },
-        { index: 1, name: "Passageiro", url: '/rider' },
+        { index: 0, name: "Motorista", active: true, url: '/'},
+        { index: 1, name: "Passageiro", url: '/passageiro' },
         { index: 1, name: "Sobre Passit", url: '/about' },
     ],
     activeMenu: (url?: string) =>
