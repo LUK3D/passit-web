@@ -6,7 +6,10 @@ import Home from './pages/Home'
 
 import {
   createBrowserRouter,
+  BrowserRouter as Router,
   RouterProvider,
+  Route,
+  Routes,
 } from "react-router-dom";
 import Passageiro from './pages/Passageiro'
 
@@ -25,10 +28,15 @@ function App() {
 
   return (
     <div className="w-screen h-screen flex flex-col overflow-y-auto text-gray-700 pt-14">
-      <Head></Head>
-      <RouterProvider router={router} />
-      <SignUpDialog></SignUpDialog>
-      <Footer></Footer>
+      <Router  >
+        <Head></Head>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/passageiro" element={<Passageiro />} />
+        </Routes>
+        <SignUpDialog></SignUpDialog>
+        <Footer></Footer>
+      </Router>
     </div>
   )
 }

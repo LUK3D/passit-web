@@ -20,12 +20,13 @@ export default function Head() {
                     <img className='w-10 h-10' src={logo} alt="" />
                 </li>
                 {menus.map(menu => (
-                    <Link to={menu.url!} onClick={() => activeMenu(window.location.pathname)} key={menu.name} className={`mx-2 flex group flex-col relative cursor-pointer transition-all transform transition-transform active:scale-95 ${menu.active && 'text-green-500 font-bold'}`}>
-                        {menu.name}
-                        <div className='w-full h-1 bg-green-500 origin-left scale-0 group-hover:scale-100  absolute -bottom-2 transform transition-transform'></div>
-                    </Link>
+                    <li key={menu.name}>
+                        <Link to={menu.url!} onClick={() => activeMenu(window.location.pathname)} className={`mx-2 flex group flex-col relative cursor-pointer transition-all transform transition-transform active:scale-95 ${menu.active && 'text-green-500 font-bold'}`}>
+                            {menu.name}
+                            <div className='w-full h-1 bg-green-500 origin-left scale-0 group-hover:scale-100  absolute -bottom-2 transform transition-transform'></div>
+                        </Link>
+                    </li>
                 ))}
-
             </ul>
             <button onClick={() => toggle()} className=' hidden md:flex px-5 py-2.5 bg-green-500 text-white m-2 rounded-md'>
                 Torne-se motorista
