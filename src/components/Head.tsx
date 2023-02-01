@@ -9,9 +9,9 @@ export default function Head() {
     const { activeMenu, menus } = useMenusStore((state) => state);
     const { toggle } = useSignUpDialogStore((state) => state);
 
-    useEffect(() => {
-        activeMenu(window.location.pathname)
-    }, [])
+    // useEffect(() => {
+    //     activeMenu(window.location.pathname)
+    // }, [])
 
     return (
         <div className='w-full  bg-white fixed top-0 right-0 flex justify-between items-center z-10 text-sm md:text-lg py-1 shadow'>
@@ -21,7 +21,7 @@ export default function Head() {
                 </li>
                 {menus.map(menu => (
                     <li key={menu.name}>
-                        <Link to={menu.url!} onClick={() => activeMenu(window.location.pathname)} className={`mx-2 flex group flex-col relative cursor-pointer transition-all transform transition-transform active:scale-95 ${menu.active && 'text-green-500 font-bold'}`}>
+                        <Link to={menu.url!} onClick={() => activeMenu(menu.url)} className={`mx-2 flex group flex-col relative cursor-pointer transition-all transform transition-transform active:scale-95 ${menu.active && 'text-green-500 font-bold'}`}>
                             {menu.name}
                             <div className='w-full h-1 bg-green-500 origin-left scale-0 group-hover:scale-100  absolute -bottom-2 transform transition-transform'></div>
                         </Link>
